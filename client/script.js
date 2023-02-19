@@ -76,7 +76,6 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server
-
   const response = await fetch("https://ai-code-g.onrender.com", {
     method: "POST",
     headers: {
