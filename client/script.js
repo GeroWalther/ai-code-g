@@ -76,15 +76,18 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server
-  const response = await fetch("https://ai-code-g.onrender.com", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      prompt: data.get("prompt"),
-    }),
-  });
+  const response = await fetch(
+    "https://exxpress-server-for-ai-chat-app.onrender.com",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: data.get("prompt"),
+      }),
+    }
+  );
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = "";
